@@ -13,8 +13,8 @@ public class YoutubeActivity extends YouTubeBaseActivity
             implements YouTubePlayer.OnInitializedListener
 {
 
-    private String GOOGLE_API_KEY = "TBA";
-    private String YOUTUBE_VIDEO_ID = "TBA";
+    private String GOOGLE_API_KEY = "AIzaSyAfpEFPtukVeFcry4cABJkRvP_jV4EdhQE";
+    private String YOUTUBE_VIDEO_ID = "_hcXb7UafYg";
 
 
     @Override
