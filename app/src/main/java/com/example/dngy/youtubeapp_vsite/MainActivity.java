@@ -1,6 +1,7 @@
 package com.example.dngy.youtubeapp_vsite;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnSingle ;
     private Button btnSubMenu;
+    private ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSingle.setOnClickListener(this);
         btnSubMenu.setOnClickListener(this);
 
-
+        img = (ImageView)findViewById(R.id.vsite);
+        img.setOnClickListener(this);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -43,12 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        });
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-  
+
 
         return true;
 
@@ -71,11 +77,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+
         Intent intent = null;
         //switch odabire koji je button stisnut
         switch (v.getId()){
             case R.id.btnPlaySingleVideo:
                 intent = new Intent(MainActivity.this, YoutubeActivity.class);
+                break;
+
+            case R.id.vsite:
+                intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.vsite.hr/"));
+                startActivity(intent);
                 break;
 
             case R.id.btnSubMenu:
@@ -89,5 +104,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
+//    public void openBrowser(View view){
+//
+//        //Dohvaćanje URL-a
+//        String url = (String)view.getTag();
+//
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//
+//        //Slanje url-a intentu
+//        intent.setData(Uri.parse(url));
+//
+//        startActivity(intent);
+//    }
+
     }
 

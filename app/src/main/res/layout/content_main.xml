@@ -14,7 +14,29 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="316dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_above="@+id/btnSubMenu">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:id="@+id/vsite"
+                android:background="@drawable/vsite1"
+                android:clickable="false"
+                android:layout_gravity="center"
+                android:nestedScrollingEnabled="false"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.04"
+                android:layout_marginTop="20dp" />
+                <!--android:tag="https://www.vsite.hr/"-->
+                <!--android:onClick="openBrowser"/>-->
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnPlaySingleVideo"
