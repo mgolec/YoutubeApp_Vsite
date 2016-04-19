@@ -1,5 +1,6 @@
 package com.example.dngy.youtubeapp_vsite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,16 +9,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button btnSingle ;
+    private Button btnSubMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
+        btnSingle = (Button) findViewById(R.id.btnPlaySingleVideo);
+        btnSubMenu = (Button) findViewById(R.id.btnSubMenu);
+        btnSingle.setOnClickListener(this);
+        btnSubMenu.setOnClickListener(this);
+
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -49,4 +62,26 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+        //switch odabire koji je button stisnut
+        switch (v.getId()){
+            case R.id.btnPlaySingleVideo:
+                intent = new Intent(MainActivity.this, YoutubeActivity.class);
+                break;
+
+            case R.id.btnSubMenu:
+                intent = new Intent(MainActivity.this, StandaloneActivity.class);
+                break;
+
+            default:
+        }
+
+        if (intent != null) {
+            startActivity(intent);
+        }
+    }
+    }
+
