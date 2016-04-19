@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,18 +10,110 @@
     tools:context="com.example.dngy.youtubeapp_vsite.StandaloneActivity"
     tools:showIn="@layout/activity_standalone">
 
-    <Button
-        android:id="@+id/btnPlayVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/play_video"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
 
-    <Button
-        android:id="@+id/btnPlayPlaylist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/play_playlist"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</LinearLayout>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/c_predavanja"
+                android:id="@+id/btnCSH"
+                android:layout_below="@+id/btnOOP"
+                android:layout_centerHorizontal="true"
+                android:background="#fff"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/uprog_predavanja"
+                android:id="@+id/btnUPROG"
+                android:layout_below="@+id/btnCSH"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="#fff" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nwp_predavanja"
+                android:id="@+id/btnNWP"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="#fff" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aodr_predavanja"
+                android:id="@+id/btnAODR"
+                android:background="#fff"
+                android:layout_below="@+id/btnNWP"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/oom_predavanja"
+                android:id="@+id/btnOOM"
+                android:background="#fff"
+                android:layout_below="@+id/btnAODR"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pet_predavanja"
+                android:id="@+id/btnPET"
+                android:background="#fff"
+                android:layout_below="@+id/btnOOM"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:id="@+id/btnPMA"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pma_predavanja"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="false"
+                android:background="#fff" />
+
+            <Button
+                android:id="@+id/btnOOP"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/oop_predavanja"
+                android:layout_gravity="center_horizontal"
+                android:background="#fff"
+                android:layout_below="@+id/btnPMA"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dodatna_predavanja"
+                android:id="@+id/btnDOD"
+                android:background="#fff"
+                android:layout_below="@+id/btnPET"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

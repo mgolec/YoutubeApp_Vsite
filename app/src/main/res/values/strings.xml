@@ -1,11 +1,19 @@
 <resources>
-    <string name="app_name">YoutubeApp_Vsite</string>
+    <string name="app_name">VsiTe YouTube</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_youtube">Youtube Player</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="title_activity_standalone">Standalone Player</string>
+    <string name="title_activity_standalone">Predavanja</string>
     <string name="play_video">Play Video</string>
     <string name="play_playlist">Play Playlist</string>
-    <string name="play_single_video">VsiTe</string>
-    <string name="sub_menu">Sub Menu</string>
+    <string name="play_single_video">VsiTe Video</string>
+    <string name="sub_menu">Predavanja</string>
+    <string name="oop_predavanja">OOP - Predavanja</string>
+    <string name="pma_predavanja">PMA - Predavanja</string>
+    <string name="pet_predavanja">PET - Predavanja</string>
+    <string name="oom_predavanja">OOM - Predavanja</string>
+    <string name="aodr_predavanja">AODR - Predavanja</string>
+    <string name="nwp_predavanja">NWP - Predavanja</string>
+    <string name="uprog_predavanja">UPROG - Predavanja</string>
+    <string name="c_predavanja">C# - Predavanja</string>
+    <string name="dodatna_predavanja">Dodatna Predavanja</string>
 </resources>
