@@ -54,12 +54,12 @@ public class YoutubeActivity extends YouTubeBaseActivity
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
         @Override
         public void onPlaying() {
-            Toast.makeText(YoutubeActivity.this, "Video je pokrenut", Toast.LENGTH_LONG).show();
+            //Toast.makeText(YoutubeActivity.this, "Video je pokrenut", Toast.LENGTH_LONG).show();
         }
 
         @Override
         public void onPaused() {
-            Toast.makeText(YoutubeActivity.this, "Video je pauziran", Toast.LENGTH_LONG).show();
+            //Toast.makeText(YoutubeActivity.this, "Video je pauziran", Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -93,12 +93,12 @@ public class YoutubeActivity extends YouTubeBaseActivity
 
         @Override
         public void onAdStarted() {
-            Toast.makeText(YoutubeActivity.this, "Klikni na oglas!", Toast.LENGTH_LONG).show();
+            //Toast.makeText(YoutubeActivity.this, "Klikni na oglas!", Toast.LENGTH_LONG).show();
         }
 
         @Override
         public void onVideoStarted() {
-            Toast.makeText(YoutubeActivity.this, "Pokretanje videa", Toast.LENGTH_LONG).show();
+            //Toast.makeText(YoutubeActivity.this, "Pokretanje videa", Toast.LENGTH_LONG).show();
         }
 
         @Override
